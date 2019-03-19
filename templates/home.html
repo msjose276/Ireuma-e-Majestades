@@ -1,0 +1,238 @@
+{%  extends 'master.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    {% comment %}{% include 'snippets/snip_slides.html' %}{% endcomment %}
+<div>
+
+    <div class="container pt-5">
+
+
+
+        <div class="col-xl-12">
+            {% if sale %}
+                {% for single_item in sale %}
+                    <a href="#" ><img class="" src="{{ single_item.Image.url }}" alt="" style="width: 100%" ></a>
+                    <a href="#" ><h5 class="centered">{{ single_item.title }}<br><p class="text-center" style="font-size: 30px">{{ single_item.sub_title }}</p> </h5></a>
+
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        <div class="mt-3">
+            <h4 class="text-center title-for_home-page-font">Roupas de Verão</h4>
+        </div>
+        <div class="card-group footer-spacing">
+            {% if list_of_topic_for_home_page %}
+                {% for single_item in list_of_topic_for_home_page %}
+                   <div class="col-sm-6 col-md-4 col-lg-4 col-xl-6">
+
+                       {% if single_item.Image.url %}
+                           <a href="#" ><img class="" src="{{ single_item.Image.url }}" alt="" style="width: 100%" ></a>
+                       {% endif %}
+                       {% comment %}<h5 class="">{{ single_item.title }}</h5>{% endcomment %}
+                       <p class="text-center mt-3">{{ single_item.sub_title }}</p>
+                   </div>
+                {% endfor %}
+            {% else %}
+                <p>No material available</p>
+            {% endif %}
+        </div>
+
+
+
+        <!-- get the most popular item for girl -->
+        <div class="mt-3">
+            <h4 class="text-center title-for_home-page-font">Mais Populares entre as mulheres</h4>
+        </div>
+        <div class="card-group footer-spacing">
+            {% if most_popular_for_girls %}
+                {% for single_item in most_popular_for_girls %}
+                   <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2">
+
+                       {% if single_item.Image.url %}
+                           <a href="#" ><img class="" src="{{ single_item.Image.url }}" alt="" style="width: 100%" ></a>
+                       {% endif %}
+                       {% comment %}<h5 class="">{{ single_item.title }}</h5>{% endcomment %}
+                       <p class="text-center mt-3">{{ single_item.sub_title }}</p>
+                   </div>
+                {% endfor %}
+            {% else %}
+                <p>No material available</p>
+            {% endif %}
+
+        </div>
+        <!-- END OF get the most popular item for girl -->
+
+    <!-- new arrivals-->
+
+        <div class="col-xl-12">
+
+            <h4 class="text-center title-for_home-page-font">Novas Entradas</h4>
+            <a href="#" ><img class="" src="{% static 'img/new.png' %}" alt="" style="width: 100%" ></a>
+            {% comment %}<a href="#" ><h5 class="centered" style="font-size: 50px">Novas entradas<br>
+                <p class="text-center" style="font-size: 30px">novassss</p> </h5></a>{% endcomment %}
+
+        </div>
+     <!-- -->
+
+
+    <!-- choes and accessories session -->
+    {% if accessories_and_shoes %}
+        <div class="mt-3">
+            <h4 class="text-center title-for_home-page-font">Calcados e accessorios</h4>
+        </div>
+        <div class="card-group footer-spacing">
+
+            {% for single_item in most_popular_for_girls %}
+               <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2">
+
+                   {% if single_item.Image.url %}
+                       <a href="#" ><img class="" src="{{ single_item.Image.url }}" alt="" style="width: 100%" ></a>
+                   {% endif %}
+                   {% comment %}<h5 class="">{{ single_item.title }}</h5>{% endcomment %}
+                   <p class="text-center mt-3">{{ single_item.sub_title }}</p>
+               </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="mt-3">
+            <h4 class="text-center title-for_home-page-font">Calcados e accessorios</h4>
+        </div>
+        <div class="card-group footer-spacing">
+
+           <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3">
+               <a href="#" ><img class="" src="{% static 'img/girls_shoes.jpg' %} " alt="" style="width: 100%" ></a>
+               {% comment %}<h5 class="">{{ single_item.title }}</h5>{% endcomment %}
+               <p class="text-center mt-3">calsados femeninos </p>
+           </div>
+            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3">
+               <a href="#" ><img class="" src="{% static 'img/accessoriosF2.jpg' %}" alt="" style="width: 100%" ></a>
+               {% comment %}<h5 class="">{{ single_item.title }}</h5>{% endcomment %}
+               <p class="text-center mt-3">accessorios femeninos</p>
+           </div>
+            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3">
+               <a href="#" ><img class="" src="{% static 'img/man_shoes.jpg' %}" alt="" style="width: 100%" ></a>
+               {% comment %}<h5 class="">{{ single_item.title }}</h5>{% endcomment %}
+               <p class="text-center mt-3">calsados masculinos</p>
+           </div>
+            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3">
+               <a href="#" ><img class="" src="{% static 'img/accessoriosM.jpg' %}" alt="" style="width: 100%" ></a>
+               {% comment %}<h5 class="">{{ single_item.title }}</h5>{% endcomment %}
+               <p class="text-center mt-3">accessorios masculinos</p>
+           </div>
+
+        </div>
+        {% comment %}<p>No material available</p>{% endcomment %}
+    {% endif %}
+        <!-- END OF get the most popular item for girl -->
+
+
+
+
+
+
+        <!-- START of african stile -->
+    {% if african_style %}
+        <div class="mt-3">
+            <h4 class="text-center title-for_home-page-font">Calcados e accessorios</h4>
+        </div>
+        <div class="card-group footer-spacing">
+
+            {% for single_item in most_popular_for_girls %}
+               <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2">
+
+                   {% if single_item.Image.url %}
+                       <a href="#" ><img class="" src="{{ single_item.Image.url }}" alt="" style="width: 100%" ></a>
+                   {% endif %}
+                   {% comment %}<h5 class="">{{ single_item.title }}</h5>{% endcomment %}
+                   <p class="text-center mt-3">{{ single_item.sub_title }}</p>
+               </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="mt-3">
+            <h4 class="text-center title-for_home-page-font">Traje Africanos</h4>
+        </div>
+        <div class="card-group footer-spacing">
+
+           <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3">
+               <a href="#" ><img class="" src="{% static 'img/a10.jpg' %} " alt="" style="width: 100%" ></a>
+               {% comment %}<h5 class="">{{ single_item.title }}</h5>{% endcomment %}
+               <p class="text-center mt-3">accessorios femeninos</p>
+           </div>
+            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3">
+               <a href="#" ><img class="" src="{% static 'img/a9.jpg' %}" alt="" style="width: 100%" ></a>
+               {% comment %}<h5 class="">{{ single_item.title }}</h5>{% endcomment %}
+               <p class="text-center mt-3">accessorios femeninos</p>
+           </div>
+            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3">
+               <a href="#" ><img class="" src="{% static 'img/a3.jpg' %}" alt="" style="width: 100%" ></a>
+               {% comment %}<h5 class="">{{ single_item.title }}</h5>{% endcomment %}
+               <p class="text-center mt-3">calsados masculinos</p>
+           </div>
+            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3">
+               <a href="#" ><img class="" src="{% static 'img/a4.jpg' %}" alt="" style="width: 100%" ></a>
+               {% comment %}<h5 class="">{{ single_item.title }}</h5>{% endcomment %}
+               <p class="text-center mt-3">accessorios masculinos</p>
+           </div>
+
+        </div>
+        {% comment %}<p>No material available</p>{% endcomment %}
+    {% endif %}
+        <!-- END OF african stile -->
+
+
+
+
+
+    <!-- get the most popular item for man -->
+        <div class="mt-3">
+            <h4 class="text-center title-for_home-page-font">Mais Populares entre os homens</h4>
+        </div>
+        <div class="card-group footer-spacing">
+            {% if most_popular_for_man %}
+                {% for single_item in most_popular_for_girls %}
+                   <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2">
+
+                       {% if single_item.Image.url %}
+                           <a href="#" ><img class="" src="{{ single_item.Image.url }}" alt="" style="width: 100%" ></a>
+                       {% endif %}
+                       {% comment %}<h5 class="">{{ single_item.title }}</h5>{% endcomment %}
+                       <p class="text-center mt-3">{{ single_item.sub_title }}</p>
+                   </div>
+                {% endfor %}
+            {% else %}
+                <p>No material available</p>
+            {% endif %}
+
+        </div>
+        <!-- END OF get the most popular item for man -->
+
+
+
+
+{% comment %}
+        <div class="card-group footer-spacing mt-3">
+            {% if list_of_topic_for_home_page %}
+                {% for single_item in list_of_topic_for_home_page %}
+                   <div class="col-sm-6 col-md-4 col-lg-4 col-xl-6">
+                       {% if single_item.Image.url %}
+                           <a href="#" ><img class="" src="{{ single_item.Image.url }}" alt="" style="width: 100%" ></a>
+                       {% endif %}
+                       <h5 class="centered">{{ single_item.title }}</h5>
+                       <p class="centered">{{ single_item.sub_title }}</p>
+                   </div>
+                {% endfor %}
+            {% else %}
+                <p>No material available</p>
+            {% endif %}
+
+        </div>{% endcomment %}
+
+
+    </div>
+</div>
+{% endblock %}
+
+

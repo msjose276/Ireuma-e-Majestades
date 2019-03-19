@@ -1,0 +1,41 @@
+{%  extends 'master.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+  <div class="">
+    <div class="site-section block-3 site-blocks-2 bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 site-section-heading text-center pt-4">
+            <h2>{{section_title}}</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="nonloop-block-3 owl-carousel">
+              {% for single_item in list_of_items %}
+                <div class="item">
+                  <a href="#">
+                    <div class="block-4 text-center">
+                      <figure class="block-4-image">
+                        <img src="{% static 'img/cloth_1.jpg' %}" alt="Image placeholder" class="img-fluid">
+                      </figure>
+                      <div class="block-4-text p-4">
+                        <h3><a href="#">{{single_item.title}}</a></h3>
+                        <p class="mb-0">Finding perfect t-shirt</p>
+                        <p class="text-primary font-weight-bold">{{single_item.price}} Kz</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              {% endfor %}
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,165 @@
+{%  extends 'master.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <!-- ##### Welcome Area Start ##### -->
+        <section class="welcome_area bg-img background-overlay" style="background-image: url({% static 'img/bg-1.jpg' %});background-size: cover">
+            <div class="container">
+                <div class="row high-500 align-items-center">
+                    <div class="col-12">
+                        <div class="hero-content ">
+                            <h6>asoss</h6>
+                            <h2>nova colecao</h2>
+                            <button type="button" class="btn btn-primary">Ver colecao</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {#end of the page cover#}
+
+   {% comment %} <div class="container">
+        <div class="">
+            <div class="d-flex justify-content-center m-4">
+                <h3>Mulheres</h3>
+            </div>
+            <div class="d-flex flex-row">
+                <div class="d-flex align-items-center justify-content-center bg-img high-300 col-sm-6 col-md-4 col-lg-4 col-xl-4" style="background-image: url({% static 'img/girls_shoes.jpg' %});background-size: cover">
+                    <h1 class="font-2 text-white" >calcados</h1>
+                </div>
+                <div class="d-flex align-items-center justify-content-center bg-img high-300 col-sm-6 col-md-4 col-lg-4 col-xl-4" style="background-image: url({% static 'img/bg_woman.png' %});background-size: cover">
+                    <h1 class="font-2 text-white">roupas</h1>
+                </div>
+                <div class="d-flex align-items-center justify-content-center bg-img high-300 col-sm-6 col-md-4 col-lg-4 col-xl-4" style="background-image: url({% static 'img/accessoriosF.jpg' %});background-size: cover">
+                    <h1 class="font-2 text-white">accessorios</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endcomment %}
+
+<div class="container m-5">
+
+
+    <!-- ##### category for woman ##### -->
+    <div class="container">
+        <div class="">
+            <div class="text-center m-4">
+                <h3>Mulheres</h3>
+            </div>
+            <div class="row">
+                <div class="bg-img col-sm-6 col-md-4 col-lg-4 col-xl-4 p-2">
+                    <h1 class="tex-centered font-2 text-white" >calcados</h1>
+                    <img class="img-fluid" src="{% static 'img/girls_shoes.jpg' %}" style="width: 100%; height: 300px;object-fit: cover;">
+                </div>
+                <div class="bg-img col-sm-6 col-md-4 col-lg-4 col-xl-4 p-2" >
+                    <h1 class="tex-centered font-2 text-white">roupas</h1>
+                    <img class="img-fluid" src="{% static 'img/bg_woman.png' %}" style="width: 100%; height: 300px;object-fit: cover;">
+                </div>
+                <div class="bg-img col-sm-6 col-md-4 col-lg-4 col-xl-4 p-2" >
+                    <h1 class="tex-centered font-2 text-white">accessorios</h1>
+                    <img class="img-fluid" src="{% static 'img/accessoriosF.jpg' %}" style="width: 100%; height: 300px;object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### End of category for woman ##### -->
+
+
+    <!-- new arrivals-->
+    <div class="col-sm-6 col-md-4 col-lg-4 col-xl-12 mt-5">
+        <a href="#" ><h1 class="tex-centered font-2 text-white">Novas Entradas</h1></a>
+        <a href="#" ><img class="" src="{% static 'img/new.png' %}" alt="" style="width: 100%; height: 300px;object-fit: cover;" ></a>
+    </div>
+    <!-- end of new arrivals-->
+
+    <!-- new arrivals-->
+    <div class="mt-5 container">
+        <div class="row col-12">
+
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <a href="#" ><img class="" src="{% static 'img/b1.jpg' %}" alt="" style="width: 100%; height: 300px;object-fit: cover;" ></a>
+
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <a href="#" ><img class="" src="{% static 'img/b2.jpg' %}" alt="" style="width: 100%; height: 300px;object-fit: cover;" ></a>
+            </div>
+            <a href="#" ><h1 class="tex-centered font-2 text-white">Promocao 50% de desconto</h1></a>
+
+        </div>
+
+    </div>
+
+    <!-- end of new arrivals-->
+
+    <!-- carrousel for most popular items -->
+    <div class="container mb-5">
+        <div class="font-2 text-center m-4">
+            <h3>Mais populares Para mulheres</h3>
+        </div>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="container">
+              <div class="carousel-item active">
+                    <div class="container ">
+                        <div class="row">
+                            <div class="bg-img col-sm-6 col-md-4 col-lg-3 col-xl-3 p-2">
+                                <img class="img-fluid" src="{% static 'img/girls_shoes.jpg' %}"  style="width: 100%; height: 350px;object-fit: cover;">
+                            </div>
+                            <div class="bg-img col-sm-6 col-md-4 col-lg-3 col-xl-3 p-2" >
+                                <img class="img-fluid" src="{% static 'img/bg_woman.png' %}"     style="width: 100%; height: 350px;object-fit: cover;">
+                            </div>
+                            <div class="bg-img col-sm-6 col-md-4 col-lg-3 col-xl-3 p-2" >
+                                <img class="img-fluid" src="{% static 'img/accessoriosF.jpg' %}" style="width: 100%; height: 350px;object-fit: cover;">
+                            </div>
+                            <div class="bg-img col-sm-6 col-md-4 col-lg-3 col-xl-3 p-2" >
+                                <img class="img-fluid" src="{% static 'img/accessoriosF.jpg' %}" style="width: 100%; height: 350px;object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+              </div>
+                <div class="carousel-item">
+                    <div class="container ">
+                        <div class="row">
+                            <div class="bg-img col-sm-6 col-md-4 col-lg-4 col-xl-3 p-2">
+                                <img class="img-fluid" src="{% static 'img/girls_shoes.jpg' %}"  style="width: 100%; height: 350px;object-fit: cover;">
+                            </div>
+                            <div class="bg-img col-sm-6 col-md-4 col-lg-4 col-xl-3 p-2" >
+                                <img class="img-fluid" src="{% static 'img/bg_woman.png' %}"     style="width: 100%; height: 350px;object-fit: cover;">
+                            </div>
+                            <div class="bg-img col-sm-6 col-md-4 col-lg-4 col-xl-3 p-2" >
+                                <img class="img-fluid" src="{% static 'img/accessoriosF.jpg' %}" style="width: 100%; height: 350px;object-fit: cover;">
+                            </div>
+                            <div class="bg-img col-sm-6 col-md-4 col-lg-4 col-xl-3 p-2" >
+                                <img class="img-fluid" src="{% static 'img/accessoriosF.jpg' %}" style="width: 100%; height: 350px;object-fit: cover;">
+                            <h1 class="tex-centered font-2 text-white">accessorios</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+    </div>
+    </div>
+    <!-- end of carrousel for most popular items -->
+
+
+
+
+
+
+
+
+</div>
+{% endblock %}
+
+
