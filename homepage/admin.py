@@ -2,24 +2,37 @@ from django.contrib import admin
 from .models import Cloth
 from .models import Hair
 from .models import Shoe
+from .models import Section
+from .models import Item
+
+
 # Register your models here.
 
+class ItemAdmin(admin.ModelAdmin):
+    ordering = ['type']
+    list_display = ['type','title','price','date','popularity','sale','african_traje']
 
 
 class ClothAdmin(admin.ModelAdmin):
     ordering = ['title']
-    list_display = ['title','price','data','popularity','sale','african_traje']
+    list_display = ['title','price','date','popularity','sale','african_traje']
 
 class ShoeAdmin(admin.ModelAdmin):
     ordering = ['title']
-    list_display = ['title','price','data','popularity','sale','african_traje']
+    list_display = ['title','price','date','popularity','sale','african_traje']
 
 class HairAdmin(admin.ModelAdmin):
     ordering = ['title']
-    list_display = ['title','price','data','popularity','sale']
+    list_display = ['title','price','date','popularity','sale']
 
+
+class SectionAdmin(admin.ModelAdmin):
+    ordering = ['title']
+    list_display = ['title','date']
 
 #-----------------------------------------------------------------------------------
+admin.site.register(Item, ItemAdmin)
 admin.site.register(Cloth, ClothAdmin)
 admin.site.register(Shoe, ShoeAdmin)
 admin.site.register(Hair, HairAdmin)
+admin.site.register(Section, SectionAdmin)
