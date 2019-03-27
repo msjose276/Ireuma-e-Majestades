@@ -14,6 +14,16 @@ class Item(models.Model):
     #artwork = models.ImageField(upload_to='uploads/projects/', max_length=45, blank=True)
     popularity = models.IntegerField(default=0)
 
+
+# Similar to Color, Photo can be featured alongside Project.
+# Multiple instances of Photo can also be created in the admin panel.
+class PhotoItem(models.Model):
+    item_name = models.ForeignKey(Item,on_delete=models.CASCADE)
+    photo = models.ImageField(upload_to='uploads/item/photo', max_length=45)
+    def projectTitle(self):
+        return self.item_name.title
+
+
 class Cloth(models.Model):
     title = models.CharField(max_length=100)
     type = models.CharField(max_length=100,default="blusa")

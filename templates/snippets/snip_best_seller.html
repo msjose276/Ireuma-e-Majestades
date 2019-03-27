@@ -14,7 +14,7 @@
           <div class="nonloop-block-3 owl-carousel">
             {% for single_item in best_sellers %}
               <div class="item">
-                <a href="#">
+                <a href="{% url 'single_item' keyword=single_item.id %}">
                   <div class="block-4 text-center">
                     <figure class="block-4-image">
                       <!-- <img src="{{single_item.artwork.url}}" alt="Image placeholder" class="img-fluid"> -->

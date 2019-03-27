@@ -4,13 +4,19 @@ from .models import Hair
 from .models import Shoe
 from .models import Section
 from .models import Item
+from .models import PhotoItem
 
+
+#------------------------------- Item photo ----------------------------------------------------
+class PhotoItemInline(admin.TabularInline):
+    model = PhotoItem
 
 # Register your models here.
 
 class ItemAdmin(admin.ModelAdmin):
     ordering = ['type']
     list_display = ['type','title','price','date','popularity','sale','african_traje']
+    inlines = [PhotoItemInline]
 
 
 class ClothAdmin(admin.ModelAdmin):
