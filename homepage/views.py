@@ -10,12 +10,17 @@ from .models import Hair
 from .models import Section
 from .models import Item
 from .models import PhotoItem
+from .models import SaleSection
 
 
 
 
 def index(request):
     list_of_section = Section.objects.order_by('title')
+
+    sale_object_list = SaleSection.objects.order_by('title')
+    sale_object = sale_object_list[0]
+
 
     # get the 10 best seller items
     list_of_best_sellers = Item.objects.order_by('-popularity')
@@ -25,8 +30,7 @@ def index(request):
     context = {
         'list_of_section' : list_of_section,
         'best_sellers' : best_sellers,
-
-
+        'sale_object' : sale_object,
     }
     return HttpResponse(template.render(context, request))
 
@@ -47,7 +51,7 @@ def best_sellers(request):
     list_of_best_sellers = Item.objects.filter(sale=True)
 
     list_of_best_sellers = Item.objects.order_by('-popularity')
-    list_of_items = list_of_best_sellers[:4]
+    list_of_items = list_of_best_sellers[:10]
 
     template = loader.get_template('section_detail.html')
 
@@ -61,7 +65,7 @@ def best_sellers(request):
 
 def new_arrivals(request):
     list_of_new_arrivals = Item.objects.order_by('-date')
-    list_of_items = list_of_new_arrivals[:40]
+    list_of_items = list_of_new_arrivals[:20]
     template = loader.get_template('section_detail.html')
 
     section_title = 'Novas Chegadas'

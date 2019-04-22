@@ -1,5 +1,6 @@
 {% load staticfiles %}
 
+<!-- this section is DONE  -->
 <div class="" id="sections">
     <div class="site-section site-blocks-2">
       <div class="pt-5 container">
@@ -14,7 +15,7 @@
                     {% endif %}
                   </figure>
                   <div class="text">
-                    <span class="text-uppercase">Collections</span>
+                    <!-- <span class="text-uppercase">Collections</span> -->
                     <h3>{{single_item.title}}</h3>
                   </div>
                 </a>
@@ -22,40 +23,7 @@
             {%endif%}
           {% endfor %}
 
-          <!-- {% if shoes_cover %}
-          <div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
-            <a class="block-2-item" href="{% url 'section_detail' keyword='Cloth' %}">
-              <figure class="image">
-                {% if shoes_cover.artwork.url %}
-                  <img src="{{ shoes_cover.artwork.url }}" alt="" class="img-fluid">
-                {% endif %}
-              </figure>
-              <div class="text">
-                <span class="text-uppercase">Collections</span>
-                <h3>Calcados</h3>
-              </div>
-            </a>
-          </div>
-          {%endif%}
-
-          {% if hair_cover %}
-          <div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
-            <a class="block-2-item" href="{% url 'section_detail' keyword='Cloth' %}">
-              <figure class="image">
-                {% if hair_cover.artwork.url %}
-                  <img src="{{ hair_cover.artwork.url }}" alt="" class="img-fluid">
-                {% endif %}
-              </figure>
-              <div class="text">
-                <span class="text-uppercase">Collections</span>
-                <h3>Cabelos</h3>
-              </div>
-            </a>
-          </div>
-          {%endif%} -->
         </div>
       </div>
     </div>
-
-
 </div>

@@ -58,3 +58,10 @@ class Section(models.Model):
     title = models.CharField(max_length=100)
     date = models.DateTimeField(default=timezone.now)
     artwork = models.ImageField(upload_to='uploads/sections/', default= " ",blank=False,max_length=45)
+
+class SaleSection(models.Model):
+    title = models.CharField(max_length=100)
+    highlight_sentence = models.CharField(max_length=100)
+    description = models.CharField(max_length=100)
+    date = models.DateTimeField(default=timezone.now)
+    artwork = models.ImageField(upload_to='uploads/sections/', default= " ",blank=False,max_length=45)

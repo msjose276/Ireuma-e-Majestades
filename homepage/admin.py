@@ -5,6 +5,7 @@ from .models import Shoe
 from .models import Section
 from .models import Item
 from .models import PhotoItem
+from .models import SaleSection
 
 
 #------------------------------- Item photo ----------------------------------------------------
@@ -36,9 +37,15 @@ class SectionAdmin(admin.ModelAdmin):
     ordering = ['title']
     list_display = ['title','date']
 
+class SaleSectionAdmin(admin.ModelAdmin):
+    ordering = ['title']
+    list_display = ['title','date','highlight_sentence','description','date',]
+    
+
 #-----------------------------------------------------------------------------------
 admin.site.register(Item, ItemAdmin)
 admin.site.register(Cloth, ClothAdmin)
 admin.site.register(Shoe, ShoeAdmin)
 admin.site.register(Hair, HairAdmin)
 admin.site.register(Section, SectionAdmin)
+admin.site.register(SaleSection, SaleSectionAdmin)
